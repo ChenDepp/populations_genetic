@@ -1,5 +1,6 @@
 # 关于gatk鉴定变异几个要点
 1 gatk中CombineGVFs与GenomicsDBimport 之间的比较以及各自优缺点：
  CombineGVCFs与GenomicsDBimport之间对内存的消耗都是随着样本数、基因组大小的增加而增加的。虽然官方推荐大规模样本gvcf文件合并使用GenomicsDBimport优于CombineGVCFs，但是合并的速度GenomicsDBimport是慢于CombineGVCFs（样本数越大、基因组越大）两者的合并速度可能越大，但是GenomicsDBimport存在一个优点，那就是GenomicsDBimport生成的genomics database占用空间大小小于CombineGVFs合并的后gvcf文件。
+ 
 2 大规模样本合并gvcf文件时CombineGVCFs和GenomicsDBimport合并都会遇到out of memory错误。
  合并大规模样本gvcf文件时。，但是.   
